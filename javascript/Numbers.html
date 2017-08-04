@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang= "en">
+<head> 
+<style width= 2em <div> </style>
+
+<title></title>
+<style> 
+      div { text-align: center; width: 99%; margin-top: 80px }
+
+</style>
+<script lang="javascript">
+
+ var digit = 0
+function changeNbr(chgAmt) {
+	var theNbrCtrl = document.getElementById("theNbr");
+	digit = digit + Number(chgAmt);
+	
+	theNbrCtrl.value = digit;
+
+
+     
+
+
+  
+}
+
+
+
+
+
+
+</script>
+<body>
+
+ <div>
+  <button id="subtract" onclick ="changeNbr(-1);">-</button>
+  <input id="theNbr" type="text" value ="0" size="7" >
+  <button id="add" onclick ="changeNbr(1);">+</button>
+  
+
+</div>
+</body>
+</html>
