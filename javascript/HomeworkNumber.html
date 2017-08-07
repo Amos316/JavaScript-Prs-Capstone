@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head> 
+<style <div> {margin-left: 40px; margin-top:0; text-align: center}  </style>
+   <title> HomeworkNumber </title>
+
+ <script lang="javascript">
+ "use strict"
+
+ function CheckNumber() {
+
+        var digit= document.getElementById("digit");
+        var zac = digit.value
+
+
+var res = document.getElementById("result");
+
+res.style.cssText = null;
+        
+                if (zac % 2 == 0 && zac % 7 == 0 && zac % 3 == 0) {
+
+                    
+                	res.style.color = "red";
+                	res.innerHTML = zac.italics();
+                	res.style.fontSize ="150%";
+
+
+               }else{
+
+               	 if (zac % 2 == 0) {
+
+                    
+                	res.style.color = "red";
+                	res.innerHTML = zac;
+
+
+               }
+
+
+               	   else if(zac % 3 == 0){
+
+res.style.color = "black";
+                   
+               	    	res.innerHTML = zac.italics(); 
+
+               	    }else if(zac % 7 == 0){
+               	    	res.style.color = "black";
+
+               	    	res.style.fontSize ="150%";
+               	    	res.innerHTML = zac;
+
+               	    }else{
+
+res.style.color = "black";
+               	    	res.innerHTML = zac;
+               	    }
+
+
+               	    
+
+               }
+    
+
+         
+
+        
+}
+
+</script>
+
+
+</head>
+<body>
+  <div>
+    <label> Enter a Number to Check:</label>
+	<input id="digit" type="text" value="0">
+	<button onclick="CheckNumber();"> Submit </button>
+	<label id="result"></label>
+
+ </div>	
+
+
+</body>
+
+</html>
