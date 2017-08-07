@@ -7,52 +7,51 @@
  <script lang="javascript">
  "use strict"
 
- function CheckNumber() {
+ function changeNbr(chgAmt) {
 
-        var digit= document.getElementById("digit");
-        var zac = digit.value
-
-
-var res = document.getElementById("result");
-
-res.style.cssText = null;
+        var zac = document.getElementById("theDigit");
         
-                if (zac % 2 == 0 && zac % 7 == 0 && zac % 3 == 0) {
+
+
+        var res = document.getElementById("changeNbr");
+
+        res.style.cssText = null;
+        
+                if (res % 2 == 0 && res % 7 == 0 && res % 3 == 0) {
 
                     
                 	res.style.color = "red";
-                	res.innerHTML = zac.italics();
+                	res.innerHTML = digit.italics();
                 	res.style.fontSize ="150%";
 
 
                }else{
 
-               	 if (zac % 2 == 0) {
+               	 if (res % 2 == 0) {
 
                     
                 	res.style.color = "red";
-                	res.innerHTML = zac;
+                	res.innerHTML = digit;
 
 
                }
 
 
-               	   else if(zac % 3 == 0){
+               	   else if(res % 3 == 0){
 
-res.style.color = "black";
-                   
-               	    	res.innerHTML = zac.italics(); 
+                          res.style.color = "black";
+                          res.innerHTML = digit.italics(); 
 
-               	    }else if(zac % 7 == 0){
+               	    }else if(res % 7 == 0){
                	    	res.style.color = "black";
 
                	    	res.style.fontSize ="150%";
-               	    	res.innerHTML = zac;
+               	    	res.innerHTML = digit;
 
                	    }else{
 
-res.style.color = "black";
-               	    	res.innerHTML = zac;
+                        res.style.color = "black";
+               	    	res.innerHTML = digit;
                	    }
 
 
@@ -72,10 +71,10 @@ res.style.color = "black";
 </head>
 <body>
   <div>
-    <label> Enter a Number to Check:</label>
-	<input id="digit" type="text" value="0">
-	<button onclick="CheckNumber();"> Submit </button>
-	<label id="result"></label>
+  
+  <button id="sub" onclick ="changeNbr(-1);">-</button>
+  <input id="theDigit" type="text" value ="0" size="7" >
+  <button id="add" onclick ="changeNbr(1);">+</button>
 
  </div>	
 

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html  lang="en">
+<head>
+	<title> accumilator</title>
+
+<script lang="javascript">
+
+     Function CalcFact() 
+     {
+
+        var nbrCtrl = document.getElementbyId("nbr");
+        var ansCtrl = document.getElementbyId("ans");
+        var nbr = Number(nbrCtrl.value);
+
+      
+      var ans = 0
+       for (var idx =1 ; idx <= nbr; idx++) {
+
+            ans = ans + idx;
+        }
+            ansCtrl.value = ans ;
+       }
+
+
+
+
+
+
+
+  
+
+</script>
+
+</head>
+
+<body>
+
+
+<label> Factorial Function:</label>
+<input id= "nbr" placeholder="Number" size="5">
+<button onclick="CalcFact()">Calculate</button>
+<input id="ans" placeholder="Solution">
+
+</body>
+</html>

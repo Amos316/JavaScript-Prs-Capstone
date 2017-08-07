@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title></title>
+ <script lang="javascript">	
+
+    function Area() 
+    { 
+    	var radCtrl = document.getElementById("Radius");
+    	var solCtrl = document.getElementById("Circle");
+        radius      = Number(radCtrl.value);
+
+
+         var zac = 3.14151927
+         
+
+         var ans = zac * radius * radius
+
+         solCtrl.value = ans
+
+
+         
+
+
+    }
+
+
+</script>
+</head>
+<body>
+<label> Factorial Function:</label>
+<input id= "Radius" placeholder="Number" size="5">
+<button onclick="Area()">Submit</button>
+<input id="Circle" placeholder="Solution">
+</body>
+</html>

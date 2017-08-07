@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html  lang="en">
+<head>
+	<title> Factorial</title>
+
+<script lang="javascript">
+
+     Function CalcFact() {
+
+        var nbrCtrl = document.getElementbyId("nbr");
+        var ansCtrl = document.getElementbyId("ans");
+        var nbr = Number(nbrCtrl.value);
+
+        var fac = 1;
+
+        for( ; nbr > 0; nbr--) {
+        	 fac = fac * nbr; }
+
+        	 ansCtrl.value = fac;
+        }
+
+
+
+
+
+
+
+  
+
+</script>
+
+</head>
+
+<body>
+
+
+<label> Factorial Function:</label>
+<input id= "nbr" placeholder="Number" size="5">
+<button onclick="CalcFact()">Calculate</button>
+<input id="ans" placeholder="Solution">
+
+</body>
+</html>
