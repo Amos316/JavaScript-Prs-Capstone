@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> Fibonacci</title>
+	<script lang="javascript">
+
+	function display() {
+		var twi = [1, 2];
+	    for (idx=0; idx<10; idx++) {
+	    	twi.push (twi.length-1 + twi.length-2); 
+
+	    	
+
+	    var fib = document.getElementById("fib");
+             fib.textContent =  twi.join()
+
+	    }
+
+
+	}
+		
+
+
+
+	</script>
+</head>
+<body>
+<button onclick="display()" > Display Numbers</button>
+<input Id="fib" type="text" placeholder="Fibonacci Sequence">
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Random Numbers Work</title>
+	<script lang="javascript">
+		
+           
+		function run() {
+			var arr  =[];
+			for (idx=0; idx<10; idx++) {
+				arr.push (Math.floor(Math.random() * 10));
+			}
+	        var sum = 0
+	        for (idx =0; idx<arr.length; idx++) {
+
+	          	sum += arr[idx];
+
+	          	return sum;
+
+   
+	        }  	
+
+	         var ave = (sum / idx<arr.length);
+
+	         return ave;
+
+	        
+	           
+	        var Pgraph = document.getElementById("Pgraph");
+	        Pgraph.textContent = arr.join();
+
+	        var Total = document.getElementById("Total");
+	        Total.textContent = sum
+
+	        var average = document.getElementById("average");
+	        average.textContent = ave
+
+	        
+	     
+
+
+
+
+	    }		
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+</head>
+<body>
+<p id="Pgraph"> </p>
+<button onclick="run()">Run </button>
+<input id = "Total"  type="text" placeholder="Total of Numbers">
+<input id= "average" type="text" placeholder="Average of Numbers">
+
+
+
+</body>
+</html>

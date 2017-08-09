@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Friends</title>
+	<script lang="javascript">
+	
+
+       var list = ( "john", "max", "seth", "job", "ezra" )
+
+       function friends() 
+       {
+         var pCtrl = document.getElementById("friends");
+         var comma = "  " ;
+         for (var i = 0; i<list.length; i++) {
+         	pCtrl.textContent += comma + "  " + list[i];
+         	comma= " , "; }
+
+         }
+
+       
+
+
+
+</script>	
+</head>
+<body>
+   <button onclick="friends()">Friends</button>
+   <p id="friends"/>
+</body>
+</html>

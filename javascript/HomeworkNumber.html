@@ -10,60 +10,58 @@
  function changeNbr(chgAmt) {
 
         var zac = document.getElementById("theDigit");
+        var amt = zac.value
+
+          if (chgAmt == 1) {
+
+        	amt++ ;
+        } else {
+
+            amt--;
+          } 
+            
+
+           zac.style.cssText = null
+
+          if (amt % 2 == 0 && amt % 7 == 0 && amt % 3 == 0) {
+
+             zac.style.color = "red";
+             zac.style.fontStyle = "italic"
+             zac.style.fontSize = "150%";
+
+             zac.value = amt;
+
+        } 
+          else { 
+
+          if (amt % 2 == 0) {
+
+            zac.style.color = "red";
+              
+            zac.value = amt;
+         }else if (amt % 3 == 0) {
+
+              zac.style.color = "black";
+               zac.style.fontStyle = "italic";
+            zac.value = amt;
+        }        
+          else  if (amt % 7 == 0) {
+            zac.style.color = "black";
         
+           zac.style.fontSize = "150%";
+            zac.value = amt; 
+          }
+          else {
+             zac.style.color = "black";
+             zac.value = amt;
+          }  
 
-
-        var res = document.getElementById("changeNbr");
-
-        res.style.cssText = null;
-        
-                if (res % 2 == 0 && res % 7 == 0 && res % 3 == 0) {
-
-                    
-                	res.style.color = "red";
-                	res.innerHTML = digit.italics();
-                	res.style.fontSize ="150%";
-
-
-               }else{
-
-               	 if (res % 2 == 0) {
-
-                    
-                	res.style.color = "red";
-                	res.innerHTML = digit;
-
-
-               }
-
-
-               	   else if(res % 3 == 0){
-
-                          res.style.color = "black";
-                          res.innerHTML = digit.italics(); 
-
-               	    }else if(res % 7 == 0){
-               	    	res.style.color = "black";
-
-               	    	res.style.fontSize ="150%";
-               	    	res.innerHTML = digit;
-
-               	    }else{
-
-                        res.style.color = "black";
-               	    	res.innerHTML = digit;
-               	    }
-
-
-               	    
-
-               }
-    
-
-         
-
-        
+          } 
+           
 }
+
+
+        
 
 </script>
 
@@ -72,9 +70,9 @@
 <body>
   <div>
   
-  <button id="sub" onclick ="changeNbr(-1);">-</button>
-  <input id="theDigit" type="text" value ="0" size="7" >
-  <button id="add" onclick ="changeNbr(1);">+</button>
+  <button id="sub" onclick ="changeNbr(-1);"> - </button>
+  <input id="theDigit" type="text" value ="0" size="7" disabled/>
+  <button id="add" onclick ="changeNbr(1);"> + </button>
 
  </div>	
 
