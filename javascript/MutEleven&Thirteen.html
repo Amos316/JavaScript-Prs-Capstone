@@ -3,13 +3,39 @@
 <head>
 	<title> 11 and 13</title>
 	<script lang="javascript">
-		
 
 
+	function getSum(total, num) {
+       return total + num;
+}
+    function met() {
+           
+            var pls = [];
+            var number = 0;
+
+            while (pls.length != 20) {
+
+                  if (number % 11 ==0 || number % 13 == 0 ){
+
+                      pls.push (number);
+
+                  }  
+
+                  number++;
+
+             }   
+
+              document.getElementById("boom").innerHTML=pls; 
+              document.getElementById("average").innerHTML=pls.reduce(getSum)/20;   
+              
+
+     }
 	
 </script>
 </head>
-<body>
+<body onload="met();">
 <p id = "boom"></p>
+<p id = "average"></p>
+
 </body>
 </html>
