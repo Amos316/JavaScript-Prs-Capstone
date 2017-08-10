@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<title> Determiner</title>
+	<script lang="javascript">
+    "use strict"
+    var bull = [];
+ function Budget() {   
+    var cars = document.getElementById("cars");
+    var engine = document.getElementById("size");
+    var price = document.getElementById("price");
+    var gas = document.getElementById("mpg");
+    var carss = cars.value;
+    var engines = engine.value;
+    var prices = price.value;
+    var gass	= gas.value; 
+    var bulls = {};
+        bulls.cars= carss;
+        bulls.engine = engines;
+        bulls.price = prices;
+        bulls.gass = gass;    
+        bull.push(bulls);
+    var pak = document.getElementById("store")
+        pak.innerHTML = " ";
+ for (var idx =0; idx<bull.length; idx++) {
+      var veh = bull[idx].cars;
+      var cash = bull[idx].engine;
+      var save = bull[idx].price;
+      var dis = bull[idx].gas;
+      var organize = "<tr>";
+          organize += "<td>" + carss + "</td>";
+          organize += "<td>" + engines + "</td>";
+          organize += "<td>" + prices + "</td>";
+          organize += "<td>" + gass + "</td>";
+
+          pak.innerHTML += organize;
+
+      };    
+
+     
+
+
+
+
+}
+</script>    
+</head>
+<body>
+<input id ="cars"  type="text" placeholder="Future Car"></input>
+<input id ="size"  type ="text" placeholder="Engine"></input>
+<input id ="price" type = "text" placeholder="$"></input>
+<input id = "mpg" type = "text" placeholder="mpg"></input>
+<button onclick="Budget()">Add to list</button>
+
+<table>
+    <thead> 
+      <tr><td>Cars</td><td>Engine </td><td>Price</td><td>MPG</td>
+      </tr>
+     </thead>
+  <tbody id = "store">
+  </tbody>
+	
+
+ </table>
+
+</body>
+</html>

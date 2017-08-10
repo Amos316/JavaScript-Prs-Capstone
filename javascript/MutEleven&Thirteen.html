@@ -26,15 +26,30 @@
              }   
 
               document.getElementById("boom").innerHTML=pls; 
-              document.getElementById("average").innerHTML=pls.reduce(getSum)/20;   
-              
+              document.getElementById("average1").innerHTML=pls.reduce(getSum)/20;   
+
+              var sum = 0;
+
+              for(i =0 ; i < pls.length; i++){
+
+                      
+                      sum += pls[i];
+
+              } 
+
+document.getElementById("sum").innerHTML=sum;
+document.getElementById("average").innerHTML=sum/pls.length;
+
 
      }
 	
 </script>
 </head>
-<body onload="met();">
+<body onload="met()" >
 <p id = "boom"></p>
+<p id = "average1"></p>
+<p id = "sum"></p>
+
 <p id = "average"></p>
 
 </body>

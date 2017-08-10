@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Friends</title>
+	<script lang="javascript">
+	     
+  var friends = [];
+
+       function populate() {
+           var first =document.getElementById("first");
+           var second= document.getElementById("second");
+          var third = document.getElementById("third");
+           var    name = first.value;
+           var    email = second.value;
+           var    cellphone = third.value;
+           var friend = {};
+           friend.Name = name;
+           friend.Email = email;
+           friend.Cellphone = cellphone;
+           friends.push(friend);
+
+           var efo =document.getElementById("sum");
+               efo.innerHTML = "";
+      for (var idx=0; idx<friends.length; idx++) {
+          var Name = friends[idx].Name;
+          var Email = friends[idx].Email;
+          var Cellphone = friends[idx].Cellphone;
+          var trLine = "<tr>";
+              trLine +="<td>" + Name + "</td>";
+              trLine +="<td>" + Email + "</td>";
+              trLine +="<td>" + Cellphone + "</td>"; 
+
+          
+          efo.innerHTML += trLine;
+          
+         
+
+       
+         }; 
+
+
+
+    }   
+
+       
+
+
+
+</script>	
+</head>
+<body onload= "MonAmi()">
+<input id = "first" type = "text"> </input>
+<input id = "second" type= "text"> </input>
+<input id = "third" type = "text"> </input>
+<button onclick = "populate()">Populate</button>
+   <table id = "list">
+   
+     <thead>
+       <tr><td>Name</td><td>Email</td><td>Cellphone</td><td>City</td></tr>
+
+       </thead>
+       <tbody id = "sum">
+         
+       </tbody>
+     
+
+   </table>
+   
+
+</body>
+</html>
